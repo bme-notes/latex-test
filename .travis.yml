@@ -1,6 +1,7 @@
-install:
-  - sudo apt install texlive
-  - tlmgr init-usertree
+addons:
+  apt:
+    packages:
+      - texlive
 
 script:
   - pdflatex hello.tex
