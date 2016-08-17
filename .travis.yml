@@ -14,5 +14,4 @@ deploy:
   skip-cleanup: true
   overwrite: true
   on:
-    tags: true
     repo: bme-vik/latex-test
