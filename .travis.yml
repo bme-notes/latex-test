@@ -1,0 +1,17 @@
+install:
+  - sudo apt install texlive
+  - tlmgr init-usertree
+
+script:
+  - pdflatex hello.tex
+
+deploy:
+  provider: releases
+  api_key:
+    secure: S5d4sdbd8BPbkQ12HSwGYedNxRnuC20ZL1qIE71LYw2sr7sO8oz7uR4kIhpkOFKDRIZQDpyxaBb5XH/wz+0PneJmvS9cVGAcPebalbBHW8iTs1BTeNgfUSmZPcOxW98OvyDSstwyvxk/7K0h04PWqwIYumfxUXb5VEgYl1gV1FNXcRcWp33aI/L3siI8/zAQ2RwDtACgRz9IbORB6L2MSdTNjUOWXSMsX4SnmAz4ZGmzhkc+k/CKHeD2O7hznHqRB0PLH/eXIiA/ZIZLOLBVPk9ouMO9dMF1KE0GpY/gCpHki5Ci2Cjm17RAXKCAHB4dEAV52VW6lUu5KkcHsLi8Bu2hrMuSmWhnp9cJPsb+k/0npREq7i644b5UwkCtgyufshyDLZUg6LL8NmCHm0z8gpnSJX0HCazzcdNp+9m8rY4nuPfPWR1HQGhtZKhzXGevDTsLFRvD2EmnOrRIN0ty33HzSL2q1kW8A1lUyz4A3LLAl3bV6a3IgLn/AzC4CAoedxbZAkgbVA6xCmoVrliBaA+Gi6bPsWJMZA/Qyb0c9tla4UemhxArr8OsZ0JSf+ONKyMNGN1VviPIToTfBUAoz81fs2JhO4NohQkR6eHugd/R4UeXx4V4YAkow6TROLpuAE+x1Lk9oWRE/xmo5lrQA3PUiSpAeKoajfTLM2+O5kE=
+  file: hello.pdf
+  skip-cleanup: true
+  overwrite: true
+  on:
+    tags: true
+    repo: bme-vik/latex-test
