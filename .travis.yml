@@ -3,6 +3,14 @@ addons:
     packages:
       - texlive
 
+install:
+  - tlmgr update --self --all
+  - tlmgr install etoolbox
+  - tlmgr install tcolorbox
+  - tlmgr install framed
+  - tlmgr install polyglossia
+  - tlmgr install hyperref
+
 script:
   - pdflatex hello.tex
 
@@ -13,5 +21,5 @@ deploy:
   file: hello.pdf
   skip-cleanup: true
   overwrite: true
-  on:
+  on:es
     repo: bme-vik/latex-test
