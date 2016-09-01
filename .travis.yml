@@ -1,18 +1,10 @@
 addons:
   apt:
     packages:
-      - texlive
-
-install:
-  - tlmgr update --self --all
-  - tlmgr install etoolbox
-  - tlmgr install tcolorbox
-  - tlmgr install framed
-  - tlmgr install polyglossia
-  - tlmgr install hyperref
+      - texlive-xetex
 
 script:
-  - pdflatex hello.tex
+  - xelatex hello.tex
 
 deploy:
   provider: releases
