@@ -5,6 +5,7 @@ addons:
 
 script:
   - xelatex hello.tex
+  - xelatex hello.tex
 
 deploy:
   provider: releases
